@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <title>ZARA India | New Collection Online</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Karla:wght@200;300&family=Mulish:wght@200;400&family=PT+Sans&family=Pacifico&family=Shizuru&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./styles/header.css" />
+    <link rel="stylesheet" href="./styles/footer.css" />
+  </head>
+  <body>
+    <div id="header"></div>
+    <div>
+      <div class="slideshow-container">
+        <div class="mySlides fade">
+          <img
+            id="slideImg"
+            src="zara.webp"
+          />
+          <p id="sale">N E E T U</p>
+          <p id="saleTag">Web Developer</p>
+        </div>
+
+        <div class="mySlides fade">
+          <img
+            id="slideImg"
+            src="zara1.jpg"
+          />
+          <p id="sale">S A L E</p>
+          <p id="saleTag">ONLINE AND IN STORES</p>
+        </div>
+
+        <div class="mySlides fade">
+          <img
+            id="slideImg"
+            src="zara2.jpg"
+          />
+          <p id="sale">S A L E</p>
+          <p id="saleTag">ONLINE AND IN STORES</p>
+        </div>
+<div class="mySlides fade">
+          <img
+            id="slideImg"
+            src="zara3.jpg"
+          />
+          <p id="sale">S A L E</p>
+          <p id="saleTag">ONLINE AND IN STORES</p>
+        </div>
+        <div class="mySlides fade">
+          <img
+            id="slideImg"
+            src="zara4.jpg"
+          />
+          <p id="sale">S A L E</p>
+          <p id="saleTag">ONLINE AND IN STORES</p>
+        </div>
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <div>
+      <video autoplay muted loop="true" >
+        <source
+          src="1.mp4"
+          type="video/mp4"
+        />
+      </video>
+      </div>
+        <p id="smallText">INTRODUCING THE FALL/WINTER 2023 COLLECTION</p>
+      <div id="audio-control" class="muted">U</div>
+    </div>
+    <div id="footer"></div>
+  </body>
+</html>
+
+<script src="./scripts/slide.js"></script>
+
+<script type="module">
+  import { header } from "./components/header.js";
+  import { footers } from "./components/footer.js";
+  let navbar_div = document.getElementById("header");
+  let footer_div = document.getElementById("footer");
+  footer_div.innerHTML = footers();
+  navbar_div.innerHTML = header();
+  
+    $(".hamburger").click(function () {
+    $(this).toggleClass("click");
+    $(".sidebar").toggleClass("show");
+  });
+  $(".womensec").click(function () {
+    $("nav ul .womensec1").toggleClass("show");
+  });
+  $(".mensec").click(function () {
+    $("nav ul .mensec1").toggleClass("show1");
+  });
+  $("nav ul li").click(function () {
+    $(this).addClass("active").siblings().removeClass("active");
+  });
+
+</script>
+
+<script src="./scripts/index.js"></script>
